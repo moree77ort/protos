@@ -41,5 +41,4 @@ message GetAppRequest {
 
 message GetAppResponse {
   int32 app_id = 1;
-  string name = 2;
 }

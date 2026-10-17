@@ -356,7 +356,6 @@ func (x *GetAppRequest) GetAppId() int32 {
 type GetAppResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	AppId         int32                  `protobuf:"varint,1,opt,name=app_id,json=appId,proto3" json:"app_id,omitempty"`
-	Name          string                 `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -398,13 +397,6 @@ func (x *GetAppResponse) GetAppId() int32 {
 	return 0
 }
 
-func (x *GetAppResponse) GetName() string {
-	if x != nil {
-		return x.Name
-	}
-	return ""
-}
-
 var File_sso_sso_proto protoreflect.FileDescriptor
 
 const file_sso_sso_proto_rawDesc = "" +
@@ -426,10 +418,9 @@ const file_sso_sso_proto_rawDesc = "" +
 	"\x0fIsAdminResponse\x12\x19\n" +
 	"\bis_admin\x18\x01 \x01(\bR\aisAdmin\"&\n" +
 	"\rGetAppRequest\x12\x15\n" +
-	"\x06app_id\x18\x01 \x01(\x05R\x05appId\";\n" +
+	"\x06app_id\x18\x01 \x01(\x05R\x05appId\"'\n" +
 	"\x0eGetAppResponse\x12\x15\n" +
-	"\x06app_id\x18\x01 \x01(\x05R\x05appId\x12\x12\n" +
-	"\x04name\x18\x02 \x01(\tR\x04name2\xe0\x01\n" +
+	"\x06app_id\x18\x01 \x01(\x05R\x05appId2\xe0\x01\n" +
 	"\x04Auth\x129\n" +
 	"\bRegister\x12\x15.auth.RegisterRequest\x1a\x16.auth.RegisterResponse\x120\n" +
 	"\x05Login\x12\x12.auth.LoginRequest\x1a\x13.auth.LoginResponse\x126\n" +
